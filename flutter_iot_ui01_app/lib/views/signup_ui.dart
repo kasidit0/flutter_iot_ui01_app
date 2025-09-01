@@ -11,8 +11,9 @@ class _SignupUiState extends State<SignupUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
-      body: SingleChildScrollView( // ✅ ครอบด้วย SingleChildScrollView
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        // ✅ ครอบด้วย SingleChildScrollView
         child: Padding(
           padding: const EdgeInsets.only(
             left: 50.0,
@@ -22,7 +23,6 @@ class _SignupUiState extends State<SignupUi> {
           child: Column(
             children: [
               const SizedBox(height: 30.0),
-
               Align(
                 alignment: Alignment.centerLeft,
                 child: Icon(
@@ -30,9 +30,7 @@ class _SignupUiState extends State<SignupUi> {
                   size: 30.0,
                 ),
               ),
-
               const SizedBox(height: 30.0),
-
               Align(
                 alignment: Alignment.centerLeft,
                 child: Image.asset(
@@ -40,18 +38,19 @@ class _SignupUiState extends State<SignupUi> {
                   width: 225.0,
                 ),
               ),
-
               const Align(
                 alignment: Alignment.centerLeft,
-                child: Text("Get OnBoard!"),
+                child: Text(
+                  "Get OnBoard!",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
+                ),
               ),
               const Align(
                 alignment: Alignment.centerLeft,
-                child: Text("Create your profile to start your Journey."),
+                child: Text("Create your profile to start your Journey.",
+                style: TextStyle(fontWeight: FontWeight.bold),),
               ),
-
-              const SizedBox(height: 30.0),
-
+              const SizedBox(height: 15.0),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -61,7 +60,6 @@ class _SignupUiState extends State<SignupUi> {
                 ),
               ),
               const SizedBox(height: 15.0),
-
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -71,7 +69,6 @@ class _SignupUiState extends State<SignupUi> {
                 ),
               ),
               const SizedBox(height: 15.0),
-
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -81,25 +78,23 @@ class _SignupUiState extends State<SignupUi> {
                 ),
               ),
               const SizedBox(height: 15.0),
-
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.lock_outline),
+                  prefixIcon: Icon(Icons.fingerprint),
+                  
                   hintText: "Password",
                   contentPadding: EdgeInsets.all(25.0),
                 ),
               ),
-
               const SizedBox(height: 10.0),
-
               Align(
                 alignment: Alignment.centerRight,
                 child: InkWell(
                   onTap: () {},
                   child: const Text(
-                    'forgot password?',
+                    'Forgot Password?',
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
@@ -107,15 +102,14 @@ class _SignupUiState extends State<SignupUi> {
                   ),
                 ),
               ),
-
               const SizedBox(height: 10.0),
-
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   fixedSize: Size(MediaQuery.of(context).size.width, 55.0),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0), // ✅ แก้จาก BorderRadiusGeometry.circular
+                    borderRadius: BorderRadius.circular(
+                        10.0), // ✅ แก้จาก BorderRadiusGeometry.circular
                   ),
                   backgroundColor: Colors.black,
                 ),
@@ -124,16 +118,12 @@ class _SignupUiState extends State<SignupUi> {
                   style: TextStyle(color: Colors.white),
                 ),
               ),
-
               const SizedBox(height: 20.0),
-
               const Align(
                 alignment: Alignment.center,
                 child: Text("OR"),
               ),
-
               const SizedBox(height: 20.0),
-
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -152,14 +142,12 @@ class _SignupUiState extends State<SignupUi> {
                     ),
                     const Text(
                       '  Sign-In With Google',
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.black, ),
                     ),
                   ],
                 ),
               ),
-
               const SizedBox(height: 15.0),
-
               Align(
                 alignment: Alignment.center,
                 child: Row(

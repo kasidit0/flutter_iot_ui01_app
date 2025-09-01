@@ -57,6 +57,8 @@ class _SigninUiState extends State<SigninUi> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 15.0,),
               TextField(
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
@@ -75,7 +77,7 @@ class _SigninUiState extends State<SigninUi> {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   prefixIcon: Icon(
-                    Icons.person_2_outlined,
+                    Icons.fingerprint,
                   ),
                   hintText: 'Password',
                   contentPadding: EdgeInsets.all(25.0),
@@ -90,7 +92,7 @@ class _SigninUiState extends State<SigninUi> {
                 child: InkWell(
                   onTap: () {},
                   child: Text(
-                    'forgot password?',
+                    'Forgot Password?',
                     style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.bold,
