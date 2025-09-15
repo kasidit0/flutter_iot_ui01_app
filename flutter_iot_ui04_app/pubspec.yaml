@@ -1,0 +1,43 @@
+name: flutter_iot_ui04_app
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  icons_launcher: ^3.0.2 
+  google_fonts: ^6.3.1
+  font_awesome_flutter: ^10.10.0
+
+
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  assets:
+    - assets/images/
+
+  uses-material-design: true
+
+icons_launcher:
+  image_path: "assets/ic_logo_radius.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
